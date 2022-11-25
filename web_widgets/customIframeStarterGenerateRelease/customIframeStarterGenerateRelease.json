@@ -1,0 +1,39 @@
+{
+  "modelVersion" : "2.2",
+  "properties" : [
+    {
+      "label" : "NameProcess",
+      "name" : "NameProcess",
+      "caption" : "id de proceso generar release",
+      "help" : "variable que almacena el nombre de proceso actual activo",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "IdProcess",
+      "name" : "IdProcess",
+      "caption" : "IdProcess",
+      "help" : "Variable que almacena el id del proceso en la plataforma",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "VersionProcess",
+      "name" : "VersionProcess",
+      "caption" : "VersionProcess",
+      "help" : "Variable que almacena el version del proceso en la plataforma",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customIframeStarterGenerateRelease",
+  "name" : "IframeStarterGenerateRelease",
+  "lastUpdate" : 1668204534417,
+  "template" : "@customIframeStarterGenerateRelease.tpl.html",
+  "controller" : "@customIframeStarterGenerateRelease.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

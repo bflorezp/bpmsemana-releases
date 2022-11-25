@@ -1,0 +1,16 @@
+<!-- The custom widget template is defined here
+   - You can use standard HTML tags and AngularJS built-in directives, scope and interpolation system
+   - Custom widget properties defined on the right can be used as variables in a templates with properties.newProperty
+   - Functions exposed in the controller can be used with ctrl.newFunction()
+   - You can use the 'environment' property injected in the scope when inside the Editor whiteboard. It allows to define a mockup
+     of the Custom Widget to be displayed in the whiteboard only. By default the widget is represented by an auto-generated icon
+     and its name (See the <span> below).
+     <h3>{{properties.NameProcess}} / {{properties.IdProcess}} / {{properties.VersionProcess}}</h3>
+-->
+
+<div style="height: 600px; width: 100%; padding: 10px; margin: auto;">
+   
+    <iframe 
+    style="margin: auto; height: 500px; width: 100%; border: none;" 
+    ng-src="{{ctrl.getLink()}}" ></iframe>
+</div>

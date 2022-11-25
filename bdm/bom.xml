@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.14.0">
+    <businessObjects>
+        <businessObject qualifiedName="co.com.semana.bpm.model.Codigos">
+            <fields>
+                <field type="LONG" length="255" name="id_tipo_release" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="consecutivo" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="id_release_creado" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="estado" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="co.com.semana.bpm.model.EstadosReleaseGenerado">
+            <description>los estados dispobles para los consecutivos generados por los releases</description>
+            <fields>
+                <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="descripcion" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="co.com.semana.bpm.model.ReleaseGenerado">
+            <description>almacenamiento de datos para la creacion de releases nuevos.</description>
+            <fields>
+                <field type="LONG" length="255" name="id_caso" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="id_creador" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="id_area" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="proyecto_anio" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="revista_edicion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="fecha_creacion" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="num_copias" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="co.com.semana.bpm.model.TipoRelease">
+            <description>almacenamiento de datos para los tipos de releases</description>
+            <fields>
+                <field type="STRING" length="10" name="prefijo" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="id_tipo_release" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipo_release" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="documento_url" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="prefijo_query" content="SELECT t &#13;&#10;FROM TipoRelease t &#13;&#10;WHERE t.id_tipo_release = :id_tipo_release" returnType="co.com.semana.bpm.model.TipoRelease">
+                    <description>trae el prefijo filtrando por id de release</description>
+                    <queryParameters>
+                        <queryParameter name="id_tipo_release" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
