@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "GeneraRelease",
   "name" : "GeneraRelease",
-  "lastUpdate" : 1667921817087,
+  "lastUpdate" : 1669835520402,
   "rows" : [
     [
       {
@@ -859,7 +859,11 @@
       "value" : [
         "../API/system/session/user_id"
       ],
-      "advancedOptions" : { },
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
       "exposed" : false
     },
     "areas" : {

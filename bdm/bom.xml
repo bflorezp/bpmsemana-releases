@@ -37,6 +37,47 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="co.com.semana.bpm.model.ReleasesTramites">
+            <description>Tabla donde se almacenan los datos del tramite de aprobaciones y archivo de releases</description>
+            <fields>
+                <field type="INTEGER" length="255" name="id_creador" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="id_director" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="id_juridica" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="id_arch_juridica" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="num_caso" nullable="true" collection="false"/>
+                <field type="STRING" length="130" name="estado" nullable="true" collection="false"/>
+                <field type="STRING" length="100" name="codigo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="fecha_creacion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="fecha_director" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="fecha_juridica" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="aprobacion_director" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="aprobacion_juridica" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="obs_director" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="obs_juridica" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="obs_archivo" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="archivo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipo_persona" nullable="true" collection="false"/>
+                <field type="STRING" length="80" name="nombre_tercero" nullable="true" collection="false"/>
+                <field type="STRING" length="130" name="tipo_identificacion" nullable="true" collection="false"/>
+                <field type="STRING" length="100" name="num_identificacion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="num_repre_legal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="text_informativo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="url" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="co.com.semana.bpm.model.TipoIdentificacion">
+            <fields>
+                <field type="STRING" length="255" name="codigo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="descripcion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="co.com.semana.bpm.model.TipoRelease">
             <description>almacenamiento de datos para los tipos de releases</description>
             <fields>
